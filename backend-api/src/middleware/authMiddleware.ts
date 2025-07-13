@@ -8,6 +8,6 @@ export const authMiddleware = (req: Request, res: Response, next: NextFunction) 
     return res.status(401).json({ error: 'Unauthorized' });
   }
 
-  req.user = { name: 'Tansen' }; // 📌 Placeholder for parsed user
+  req.user = { id: '1', name: 'Tansen', roles: ['user'] }; // 📌 Placeholder for parsed user
   next();
 };
